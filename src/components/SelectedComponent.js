@@ -1,11 +1,16 @@
 import React from 'react';
 
-function SelectedComponent(props) {
+const SelectedComponent = (props) => {
   return (
     <div className="row">
-      <div className="col-sm-8">props.value</div>
-      <div className="col-sm-3 col-sm-offset-1">
-        <button className="btn btn-danger">
+      <div className="col-sm-9">
+        <input className="form-control" value={props.value}
+        onChange={(e) => {
+          props.change(e);
+        }}/>
+      </div>
+      <div className="col-sm-2 col-sm-offset-1">
+        <button className="col-xs-12 btn btn-danger" onClick={props.remove}>
           <i className="glyphicon glyphicon-remove"></i>
         </button>
       </div>

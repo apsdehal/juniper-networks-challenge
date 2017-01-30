@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Display(props) {
+const Display = (props) => {
   return (
     <div className="container-fluid">
       <div className="form-group">

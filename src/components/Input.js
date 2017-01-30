@@ -1,15 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Input extends Component {
-  render() {
-    return (
-      <div className="form-group">
-        <label className="control-label">{this.props.title}</label>
-        <p>{this.props.description}</p>
-        <input className="form-control" placeholder={this.props.description} type={this.props.type}/>
-      </div>
-    );
-  }
+const Input = (props) => {
+  let input;
+  return (
+    <div className="form-group">
+      <label className="control-label">{props.title}</label>
+      <p>{props.description}</p>
+      <input
+        className="form-control"
+        placeholder={props.description}
+        type={props.type}
+        onChange={e => {
+          props.dispatch({type: props.title}, input.value)
+        }}
+        ref={node => { input = node; }}/>
+    </div>
+  );
 }
 
 export default Input;

@@ -8,6 +8,9 @@ class App extends Component {
     super();
     this.state = {
       query: '',
+    }
+
+    this.vars = {
       form: {
         table_name: '',
         start_time: '',
@@ -18,14 +21,9 @@ class App extends Component {
     }
   }
 
-  handleOnChange(action, value) {
-    if (action.type === 'table_name') {
-      this.setState({form: {table_name: value}});
-    } else if (action.type === 'start_time') {
-      this.setState({form: {start_time: value}});
-    } else if (action.type === 'end_time') {
-      this.setState({form: {end_time: value}});
-    }
+  dispatch(action, value) {
+    this.vars.form[action.type] = value;
+    this.setState({query: JSON.stringify(this.vars.form)});
   }
 
   render() {
@@ -34,7 +32,7 @@ class App extends Component {
         <div className="container-fluid">
           <div className="row">
             <div className="col-sm-6">
-              <Form form={this.state.forms} onChange={this.handleOnChange}></Form>
+              <Form form={this.state.forms} vars={this.vars} dispatch={this.dispatch.bind(this)}></Form>
             </div>
             <div className="col-sm-6">
               <Display query={this.state.query}></Display>
