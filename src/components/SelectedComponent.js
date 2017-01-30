@@ -10,7 +10,7 @@ const SelectedComponent = (props) => {
         }}/>
       </div>
       <div className="col-sm-2 col-sm-offset-1">
-        <button className="col-xs-12 btn btn-danger" onClick={props.remove}>
+        <button title="Remove this selected field" className="col-xs-12 btn btn-danger" onClick={props.remove}>
           <i className="glyphicon glyphicon-remove"></i>
         </button>
       </div>

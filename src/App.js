@@ -29,6 +29,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <div className="App-header">
+          <h2>Juniper Network Challenge</h2>
+        </div>
         <div className="container-fluid">
           <div className="row">
             <div className="col-sm-6">

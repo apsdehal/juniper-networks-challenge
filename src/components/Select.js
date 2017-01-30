@@ -55,14 +55,14 @@ const Select = (props) => {
         )
       }
       <div className="row">
-        <div className="col-xs-12">
+        <div className="col-xs-12 margin-item">
           <input
             className="form-control"
             placeholder="Type your select field here"
             ref={(node) => {input = node}}/>
         </div>
-        <div className="col-xs-2 col-xs-offset-10">
-          <button className="col-xs-12 btn btn-success" onClick={handleAddClick}>
+        <div className="col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-6 col-md-2 col-md-offset-10">
+          <button title="Add this select field" className="col-xs-12 btn btn-success" onClick={handleAddClick}>
             <i className="glyphicon glyphicon-plus"></i>
           </button>
         </div>

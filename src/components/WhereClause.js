@@ -76,8 +76,8 @@ const WhereClause = (props) => {
           }}/>
         )
       }
-      <div className="row">
-        <div className="col-xs-2">
+      <div className="row margin-item">
+        <div className="col-xs-4 col-md-2">
           <select className="form-control"
             ref={(node) => {inputAndOr = node}}>
             <option>AND</option>
@@ -85,20 +85,20 @@ const WhereClause = (props) => {
           </select>
         </div>
 
-        <div className="col-xs-4">
+        <div className="col-xs-8 col-md-4">
           <input
             className="form-control"
             placeholder="Type your field here"
             ref={(node) => {inputName = node}}/>
         </div>
-        <div className="col-xs-2">
+        <div className="col-xs-4 col-md-2">
           <select className="form-control"
             ref={(node) => {inputOperator = node}}>
             <option>=</option>
             <option>!=</option>
           </select>
         </div>
-        <div className="col-xs-4">
+        <div className="col-xs-8 col-md-4">
           <input
             className="form-control"
             placeholder="Type your value here"
@@ -106,8 +106,8 @@ const WhereClause = (props) => {
         </div>
       </div>
       <div className="row">
-        <div className="col-xs-2 col-xs-offset-10">
-          <button className="col-xs-12 btn btn-success" onClick={handleAddClick}>
+        <div className="col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-6 col-md-2 col-md-offset-10">
+          <button title="Add this where clause" className="col-xs-12 btn btn-success" onClick={handleAddClick}>
             <i className="glyphicon glyphicon-plus"></i>
           </button>
         </div>
