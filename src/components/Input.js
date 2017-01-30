@@ -3,9 +3,10 @@ import React, { Component } from 'react';
 class Input extends Component {
   render() {
     return (
-      <div className="row">
-        <div className="col-sm-12">{this.props.title} {this.props.description}</div>
-        <input placeholder={this.props.description} type={this.props.type}/>
+      <div className="form-group">
+        <label className="control-label">{this.props.title}</label>
+        <p>{this.props.description}</p>
+        <input className="form-control" placeholder={this.props.description} type={this.props.type}/>
       </div>
     );
   }
