@@ -4,6 +4,10 @@ import Display from './components/Display';
 import './App.css';
 
 class App extends Component {
+  toJSON(val) {
+    return JSON.stringify(val, null, 2);
+  }
+
   constructor() {
     super();
     this.state = {
@@ -23,7 +27,7 @@ class App extends Component {
 
   dispatch(action, value) {
     this.vars.form[action.type] = value;
-    this.setState({query: JSON.stringify(this.vars.form)});
+    this.setState({query: this.toJSON(this.vars.form)});
   }
 
   render() {
