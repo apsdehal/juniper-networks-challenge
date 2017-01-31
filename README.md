@@ -1,4 +1,4 @@
-# Juniper Network Challenge
+# Juniper Network Challenge [![Build Status](https://travis-ci.org/apsdehal/juniper-networks-challenge.svg?branch=master)](https://travis-ci.org/apsdehal/juniper-networks-challenge)
 
 This project has been created in response to coding challenge by Juniper Networks.
 
