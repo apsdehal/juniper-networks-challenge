@@ -13,7 +13,6 @@ const Input = (props) => {
         onChange={e => {
           props.dispatch({type: props.title}, input.value)
         }}
-        value=""
         ref={node => { input = node; }}/>
     </div>
   );
