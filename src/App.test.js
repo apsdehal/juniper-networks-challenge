@@ -1,6 +1,6 @@
 import React from 'react';
 import App from './App';
-import { mount } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import fs from 'fs';
 
 jest.mock('react-codemirror');
@@ -10,6 +10,13 @@ const setValueAndClick = (input, value, button) => {
   button.simulate('click');
 }
 
+it('should match snapshot', () => {
+  const wrapper = shallow(<App/>);
+  expect(wrapper).toMatchSnapshot();
+});
+
+
+// Functional test
 it('correctly transforms query to json', () => {
   const wrapper = mount(<App />);
   const inputs = wrapper.find('input');
