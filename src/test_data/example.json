@@ -1,0 +1,39 @@
+{
+   "table_name":"traffic_table",
+   "start_time":"1484853180000000",
+   "end_time":"1484853780000000",
+   "select_fields":[
+      "time",
+      "source_vn",
+      "destination_vn",
+      "source_port",
+      "destination_port",
+      "traffic"
+   ],
+   "where_clause":[
+      [
+         {
+            "name":"source_vn",
+            "value":"frontend-vn",
+            "operator":"="
+         },
+         {
+            "name":"source_port",
+            "value":"9000",
+            "operator":"="
+         }
+      ],
+      [
+         {
+            "name":"destination_vn",
+            "value":"backend-vn",
+            "operator":"!="
+         },
+         {
+            "name":"destination_port",
+            "value": "9001",
+            "operator":"="
+         }
+      ]
+   ]
+}
